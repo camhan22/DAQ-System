@@ -98,8 +98,8 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(startStopPin) == 0) { //If the start/stop button is pressed, then allow data logging
-    //ReadThermocouples(); //Get the temperature data
+  if (digitalRead(startStopPin) == 1) { //If the start/stop button is pressed, then allow data logging
+    ReadThermocouples(); //Get the temperature data
     ReadAnalogInputs();
     t = millis() - logStart;
     CreateDataString(); //Format the data into a string for reading
